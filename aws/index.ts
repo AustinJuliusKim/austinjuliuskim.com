@@ -33,8 +33,10 @@ class Website extends cdk.Stack {
   aliasRecord: ARecord;
   constructor(parent: cdk.App, id: string) {
     super(parent, id, { env: { region: "us-east-1" } });
+
     const getParam = (name: string): IStringParameter =>
       stringParam(this, name);
+
     const subdomainParam = getParam("SUBDOMAIN");
     const certificateArnParam = getParam("CERTIFICATE_ARN");
     const hostedZoneIdParam = getParam("HOSTED_ZONE_ID");
@@ -112,7 +114,7 @@ class Website extends cdk.Stack {
 
 class WebsiteDeploy extends cdk.Stack {
   constructor(parent: cdk.App, id: string, { bucket }: { bucket: Bucket }) {
-    super(parent, id, { env: { region: "us-east-1 " } });
+    super(parent, id, { env: { region: "us-east-1" } });
     new BucketDeployment(this, "DeployAssets", {
       source: S3Asset.asset(path.resolve("dist")),
       destinationBucket: bucket

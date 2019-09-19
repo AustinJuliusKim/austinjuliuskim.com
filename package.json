@@ -2,7 +2,6 @@
   "name": "austinjuliuskim",
   "version": "1.0.0",
   "description": "Requirements: - aws-cdk - s3 bucket deployment - cloudfront web distribution - set up a subdomain",
-  "main": "index.js",
   "scripts": {
     "build:app": "webpack --config webpack.prod.js",
     "build:cdk": "npm run cdk -- synth",
