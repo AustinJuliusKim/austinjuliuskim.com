@@ -1,0 +1,72 @@
+{
+  "name": "austinjuliuskim",
+  "version": "1.0.0",
+  "description": "Requirements: - aws-cdk - s3 bucket deployment - cloudfront web distribution - set up a subdomain",
+  "main": "index.js",
+  "scripts": {
+    "build:app": "webpack --config webpack.prod.js",
+    "build:cdk": "npm run cdk -- synth",
+    "build": "concurrently npm:build:*",
+    "cdk": "tsc && cdk --app aws/bin/index.js",
+    "check:tools": "prettier --list-different \"./webpack.*\"",
+    "check:js": "npm run lint",
+    "check:md": "prettier --list-different \"./**/*.md\"",
+    "check:json": "prettier --list-different \"./**/*.json\"",
+    "check": "concurrently npm:check:*",
+    "clean": "rimraf node_modules dist aws/bin",
+    "format:tools": "prettier --write \"./webpack.*\"",
+    "format:js": "npm run lint:fix",
+    "format:md": "prettier --write \"./**/*.md\"",
+    "format:json": "prettier --write \"./**/*.json\"",
+    "format": "concurrently npm:format:*",
+    "lint": "eslint src aws/**/**/*.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AustinJuliusKim/austinjuliuskim.com.git"
+  },
+  "author": "austinjuliuskim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AustinJuliusKim/austinjuliuskim.com/issues"
+  },
+  "homepage": "https://github.com/AustinJuliusKim/austinjuliuskim.com#readme",
+  "devDependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.8.0",
+    "@aws-cdk/aws-iam": "^1.8.0",
+    "@aws-cdk/aws-route53": "^1.8.0",
+    "@aws-cdk/aws-route53-targets": "^1.8.0",
+    "@aws-cdk/aws-s3": "^1.8.0",
+    "@aws-cdk/aws-s3-deployment": "^1.8.0",
+    "@aws-cdk/aws-ssm": "^1.8.0",
+    "@aws-cdk/core": "^1.8.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "@hot-loader/react-dom": "^16.9.0",
+    "@types/node": "^12.7.5",
+    "aws-cdk": "^1.8.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^4.1.2",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
