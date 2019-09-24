@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Iphone from "./iphone";
 import Timelater from "./timelater";
+import InCrustWeTrust from "./incrustwetrust";
 
 const StyledViewContainer = styled.div`
   align-items: center;
@@ -15,10 +16,12 @@ const StyledViewContainer = styled.div`
 const App = () => {
   return (
     <StyledViewContainer>
-      <Timelater
+      {/* <Timelater
         bg={"images/Later_That_Night_Blank.png"}
         text="Many Months Later"
-      />
+      /> */}
+      {/* <Iphone /> */}
+      <InCrustWeTrust />
     </StyledViewContainer>
   );
 };

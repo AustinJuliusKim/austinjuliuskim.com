@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import Screen from "./screen";
+
 const IphoneContainer = styled.div`
   box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
     0 0 30px 0px rgba(0, 0, 0, 0.7);
@@ -63,19 +65,6 @@ const TopBar = styled(Bar)`
 `;
 const BottomBar = styled(Bar)`
   bottom: 65px;
-`;
-const IphoneScreen = styled.div`
-  background: #eee;
-  border: 1px solid #fff;
-  height: 677px;
-  width: 375px;
-  margin: 0 auto;
-  border: 2px solid rgba(0, 0, 0, 0.9);
-  border-radius: 3px;
-  overflow: hidden;
-  img {
-    width: 100%;
-  }
 `;
 
 const Buttons = styled.div`
@@ -146,26 +135,23 @@ const IphoneBottom = styled.div`
 const Iphone = () => {
   return (
     <IphoneContainer>
-      <IphoneTop className="iphone-top">
-        <Camera className="camera" />
-        <Sensor className="sensor" />
-        <Speaker className="speaker" />
+      <IphoneTop>
+        <Camera />
+        <Sensor />
+        <Speaker />
       </IphoneTop>
-      <TopBar className="top-bar" />
-      <IphoneScreen className="iphone-screen">
-        <img
-          src="http://www.planwallpaper.com/static/images/Awesome-iPhone-Wallpapers.jpg"
-          alt=""
-        />
-      </IphoneScreen>
-      <div className="buttons">
-        <OnOff className="on-off" />
-        <Sleep className="sleep" />
-        <Up className="up" />
-        <Down className="down" />
+      <TopBar />
+
+      <Screen />
+      <div>
+        <OnOff />
+        <Sleep />
+        <Up />
+        <Down />
       </div>
-      <BottomBar className="bottom-bar" />
-      <IphoneBottom className="iphone-bottom">
+
+      <BottomBar />
+      <IphoneBottom>
         <span></span>
       </IphoneBottom>
     </IphoneContainer>
