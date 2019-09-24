@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Iphone from "./iphone";
+import Timelater from "./timelater";
 
 const StyledViewContainer = styled.div`
   align-items: center;
@@ -14,7 +15,10 @@ const StyledViewContainer = styled.div`
 const App = () => {
   return (
     <StyledViewContainer>
-      <Iphone />
+      <Timelater
+        bg={"images/Later_That_Night_Blank.png"}
+        text="Many Months Later"
+      />
     </StyledViewContainer>
   );
 };

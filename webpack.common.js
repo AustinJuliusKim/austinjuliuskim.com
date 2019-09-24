@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const path = require("path");
@@ -29,6 +30,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new CopyPlugin([{ from: "public" }]),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
