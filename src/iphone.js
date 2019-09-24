@@ -84,29 +84,28 @@ const Buttons = styled.div`
   position: absolute;
   border-radius: 2px 0px 0px 2px;
 `;
+
 const OnOff = styled(Buttons)`
   height: 40px;
   width: 3px;
   top: 100px;
   left: -8px;
 `;
-const Up = styled(Buttons)`
+
+const UpDownSleep = styled(Buttons)`
   height: 60px;
   width: 5px;
   left: -10px;
+`;
+
+const Up = styled(UpDownSleep)`
   top: 170px;
 `;
 
-const Down = styled(Buttons)`
-  height: 60px;
-  width: 5px;
-  left: -10px;
+const Down = styled(UpDownSleep)`
   top: 250px;
 `;
-const Sleep = styled(Buttons)`
-  height: 60px;
-  width: 5px;
-  left: -10px;
+const Sleep = styled(UpDownSleep)`
   left: auto;
   right: -10px;
   top: 170px;
@@ -159,12 +158,12 @@ const Iphone = () => {
           alt=""
         />
       </IphoneScreen>
-      <Buttons className="buttons">
+      <div className="buttons">
         <OnOff className="on-off" />
         <Sleep className="sleep" />
         <Up className="up" />
         <Down className="down" />
-      </Buttons>
+      </div>
       <BottomBar className="bottom-bar" />
       <IphoneBottom className="iphone-bottom">
         <span></span>
