@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Iphone from "./iphone";
 import Timelater from "./timelater";
 import InCrustWeTrust from "./incrustwetrust";
+import NeonLetters from "./neon-letters";
 
 const StyledViewContainer = styled.div`
   align-items: center;
@@ -21,7 +22,8 @@ const App = () => {
         text="Many Months Later"
       /> */}
       {/* <Iphone /> */}
-      <InCrustWeTrust />
+      {/* <InCrustWeTrust /> */}
+      {/* <NeonLetters /> */}
     </StyledViewContainer>
   );
 };
