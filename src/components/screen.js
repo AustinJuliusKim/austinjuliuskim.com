@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import Message from "./message";
+
 const IphoneScreen = styled.div`
   background: #eee;
   border: 1px solid #fff;
@@ -15,13 +17,12 @@ const IphoneScreen = styled.div`
   }
 `;
 
-const Screen = () => {
+const Screen = ({ currentScreen, nextScreen }) => {
   return (
     <IphoneScreen>
-      <img
-        src="http://www.planwallpaper.com/static/images/Awesome-iPhone-Wallpapers.jpg"
-        alt=""
-      />
+      {/* {currentScreen && <img src={currentScreen} alt="" />}
+      {nextScreen ? <img src={nextScreen} alt="" /> : null} */}
+      <Message />
     </IphoneScreen>
   );
 };

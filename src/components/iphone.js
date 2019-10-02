@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Screen from "./screen";
+import Screen from "containers/screen";
 
 const IphoneContainer = styled.div`
   box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,

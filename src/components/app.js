@@ -21,7 +21,7 @@ const App = () => {
         bg={"images/Later_That_Night_Blank.png"}
         text="Many Months Later"
       /> */}
-      {/* <Iphone /> */}
+      <Iphone />
       {/* <InCrustWeTrust /> */}
       {/* <NeonLetters /> */}
     </StyledViewContainer>
