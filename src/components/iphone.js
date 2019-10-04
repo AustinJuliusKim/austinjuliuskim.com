@@ -132,7 +132,7 @@ const IphoneBottom = styled.div`
   }
 `;
 
-const Iphone = () => {
+const Iphone = ({ handleClick }) => {
   return (
     <IphoneContainer>
       <IphoneTop>
@@ -152,7 +152,7 @@ const Iphone = () => {
 
       <BottomBar />
       <IphoneBottom>
-        <span></span>
+        <span onClick={handleClick}></span>
       </IphoneBottom>
     </IphoneContainer>
   );

@@ -14,6 +14,7 @@ const NavigationBar = styled.div`
   border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   display: flex;
+  font-size: 20px;
   height: 80px;
 `;
 
@@ -48,7 +49,7 @@ const Name = styled.p`
 `;
 
 const MessageContainer = styled.div`
-  padding: 10px;
+  padding: 20px;
 `;
 
 const StyledReceivedMessage = styled.div`
@@ -57,7 +58,7 @@ const StyledReceivedMessage = styled.div`
   margin-top: 5px;
   margin-bottom: 5px;
   display: inline-block;
-
+  font-size: 20px;
   background-color: #eee;
   position: relative;
 
@@ -92,7 +93,7 @@ const StyledSentMessage = styled.div`
   margin-top: 5px;
   margin-bottom: 5px;
   display: inline-block;
-
+  font-size: 20px;
   color: white;
   background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
   background-attachment: fixed;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Iphone from "./iphone";
+import Iphone from "containers/iphone";
 import Timelater from "./timelater";
 import InCrustWeTrust from "./incrustwetrust";
 import NeonLetters from "./neon-letters";
@@ -14,16 +14,32 @@ const StyledViewContainer = styled.div`
   width: 100%;
 `;
 
-const App = () => {
+const renderCurrentView = (str, cb) => {
+  let view;
+
+  if (str === "spongebob") {
+    view = (
+      <Timelater
+        bg={"images/2-months-later.png"}
+        text={"2-3 Months Later"}
+        cb={cb}
+      />
+    );
+  } else if (str === "grand-central") {
+    view = <NeonLetters cb={cb} />;
+  } else if (str === "end") {
+    view = <InCrustWeTrust cb={cb} />;
+  } else {
+    view = <Iphone cb={cb} />;
+  }
+
+  return view;
+};
+
+const App = ({ screen, setScreen }) => {
   return (
     <StyledViewContainer>
-      {/* <Timelater
-        bg={"images/Later_That_Night_Blank.png"}
-        text="Many Months Later"
-      /> */}
-      <Iphone />
-      {/* <InCrustWeTrust /> */}
-      {/* <NeonLetters /> */}
+      {renderCurrentView(screen, setScreen)}
     </StyledViewContainer>
   );
 };

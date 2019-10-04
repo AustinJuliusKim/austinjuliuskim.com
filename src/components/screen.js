@@ -20,9 +20,9 @@ const IphoneScreen = styled.div`
 const Screen = ({ currentScreen, nextScreen }) => {
   return (
     <IphoneScreen>
-      {/* {currentScreen && <img src={currentScreen} alt="" />}
-      {nextScreen ? <img src={nextScreen} alt="" /> : null} */}
-      <Message />
+      {currentScreen && <img src={currentScreen} alt="" />}
+      {/* {nextScreen ? <img src={nextScreen} alt="" /> : null} */}
+      {/* <Message /> */}
     </IphoneScreen>
   );
 };
