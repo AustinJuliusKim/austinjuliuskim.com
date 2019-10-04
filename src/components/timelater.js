@@ -12,6 +12,7 @@ const Background = styled.div`
 const Text = styled.p`
   font-size: 120px;
   color: white;
+  text-align: center;
 `;
 
 const Timelater = ({ text, bg, cb }) => (

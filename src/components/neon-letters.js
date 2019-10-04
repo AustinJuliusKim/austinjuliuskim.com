@@ -13,7 +13,7 @@ const Background = styled.div`
 const NeonLetters = ({ cb }) => {
   return (
     <Background onClick={cb}>
-      <img src="images/grand-central-market.gif" />
+      <img src="images/grand-central-market.gif" style={{ width: "100%" }} />
     </Background>
   );
 };
