@@ -5,3 +5,4 @@ dist
 cdk.out
 bin
 *.d.ts
+.DS_Store

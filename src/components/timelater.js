@@ -1,26 +1,28 @@
 import React from "react";
+import styled from "styled-components";
 
-const Timelater = ({ text, bg }) => (
-  <div
+const Background = styled.div`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+`;
+
+const Text = styled.p`
+  font-size: 120px;
+  color: white;
+`;
+
+const Timelater = ({ text, bg, cb }) => (
+  <Background
+    onClick={cb}
     style={{
-      alignItems: "center",
-      background: `url(${bg})`,
-      display: "flex",
-      height: "100%",
-      justifyContent: "center",
-      width: "100%"
+      background: `url(${bg})`
     }}
   >
-    <p
-      className={"sometimelater"}
-      style={{
-        fontSize: 120,
-        color: "white"
-      }}
-    >
-      {text}
-    </p>
-  </div>
+    <Text className={"sometimelater"}>{text}</Text>
+  </Background>
 );
 
 export default Timelater;

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { message as MESSAGES } from "data/message";
+
 import TinderIcon from "./tinder-icon";
 
 const Container = styled.div`
@@ -124,7 +126,7 @@ const StyledSentMessage = styled.div`
   }
 `;
 
-const Message = () => {
+const Message = ({ messages }) => {
   return (
     <Container>
       <NavigationBar>
@@ -139,8 +141,19 @@ const Message = () => {
         </IconContainer>
       </NavigationBar>
       <MessageContainer>
-        <StyledReceivedMessage>So you're a designer?</StyledReceivedMessage>
-        <StyledSentMessage>So you're a developer?</StyledSentMessage>
+        {messages &&
+          messages.length > 0 &&
+          messages.map((msg, i) => {
+            return MESSAGES[msg].type === "sent" ? (
+              <StyledSentMessage key={i}>
+                {MESSAGES[msg].text}
+              </StyledSentMessage>
+            ) : (
+              <StyledReceivedMessage key={i}>
+                {MESSAGES[msg].text}
+              </StyledReceivedMessage>
+            );
+          })}
       </MessageContainer>
     </Container>
   );

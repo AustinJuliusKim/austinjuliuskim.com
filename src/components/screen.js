@@ -12,17 +12,33 @@ const IphoneScreen = styled.div`
   border: 2px solid rgba(0, 0, 0, 0.9);
   border-radius: 3px;
   overflow: hidden;
-  img {
-    width: 100%;
-  }
+  position: relative;
+  z-index: 100;
 `;
 
-const Screen = ({ currentScreen, nextScreen }) => {
+const Slider = styled.div`
+  height: 100%;
+  position: absolute;
+  width: 1400px;
+  display: flex;
+`;
+
+const Slide = styled.div`
+  width: 375px;
+`;
+
+const Screen = ({ screen }) => {
   return (
     <IphoneScreen>
-      {currentScreen && <img src={currentScreen} alt="" />}
-      {/* {nextScreen ? <img src={nextScreen} alt="" /> : null} */}
-      {/* <Message /> */}
+      <Slider>
+        <Slide>
+          {screen.screenType === "msg" ? (
+            <Message messages={screen.messages} />
+          ) : (
+            <img src={screen.src} />
+          )}
+        </Slide>
+      </Slider>
     </IphoneScreen>
   );
 };
