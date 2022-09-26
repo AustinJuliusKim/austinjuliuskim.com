@@ -46,7 +46,7 @@
     "@babel/preset-react": "^7.0.0",
     "@hot-loader/react-dom": "^16.9.0",
     "@types/node": "^12.7.5",
-    "aws-cdk": "^1.9.0",
+    "aws-cdk": "^1.174.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
